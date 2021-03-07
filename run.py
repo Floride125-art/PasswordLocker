@@ -97,6 +97,16 @@ def main():
         save_user(create_user(username,password))
         print('='*45)
         print(f"Created an Account with username {username} and password {password}")
-        print('='*20)
+        print('='*45)
     
-       
+    elif abbreviation == 'l':
+        print('='*45)
+        print("Enter your user name and your password to continue")
+        print('='*45)
+        username = input("Username: ")
+        password = input("password: ")
+        login = user_checker(username,password)
+        if user_checker == login:
+            print('='*45)
+            print(f"Hello {username}.Welcome To PASSWORD LOCKER \n")  
+            print('='*45)
