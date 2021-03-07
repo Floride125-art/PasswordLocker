@@ -1,5 +1,5 @@
 ## Project Name:
-PasswordLockr
+PasswordLocker© 2021 GitUserSearch by Floride TUYISENGE
 #### Project Description:
 The objective of this project is to create a pplication that will help us manage our passwords and even generate new passwords for us.
 #### Author: 
