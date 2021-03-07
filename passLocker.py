@@ -22,3 +22,8 @@ class User:
             method to display all credentials
             '''
             return cls.users
+    def delete(self):
+        '''
+        delete credential
+        '''
+        User.users.remove(self)
