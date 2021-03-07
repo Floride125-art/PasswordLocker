@@ -27,3 +27,16 @@ class User:
         delete credential
         '''
         User.users.remove(self)
+class Credential():
+    '''
+    class which helps us to create new creadential for a certain account
+    '''  
+    credentials = []
+
+    def __init__(self, account_name,user_name, account_password):
+        '''
+        new instance of class credential
+        '''
+        self.account_name = account_name
+        self.user_name = user_name
+        self.account_password = account_password
