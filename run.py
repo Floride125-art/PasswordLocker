@@ -78,4 +78,25 @@ def main():
         print('='*45)
         print("Create an account in PASSWORD LOCKER")
         print('='*45)
+        username = input('Username: ')
+        while True:
+            print('='*45)
+            print('Please choose among the following in order to proceed: \n p ---------- Type a password\n g ---------- generate a password for you\n')
+            print('='*45)
+            abbreviation = input().lower()
+            if abbreviation == 'p':
+                password = input("Enter the password of your account\n")
+                break
+            elif abbreviation == 'g':
+                password = generate_password()
+                break
+            else:
+                print('='*45)
+                print('Invalid password')
+                print('='*45)
+        save_user(create_user(username,password))
+        print('='*45)
+        print(f"Created an Account with username {username} and password {password}")
+        print('='*20)
+    
        
