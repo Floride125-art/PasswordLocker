@@ -110,3 +110,35 @@ def main():
             print('='*45)
             print(f"Hello {username}.Welcome To PASSWORD LOCKER \n")  
             print('='*45)
+    while True:
+        print('='*45)
+        print("Enter the following to continue: \n c ---------- Create a new account credential \n lc ---------- Display all acount credentials \n sc ---------- Search for an account credential \n g ---------- To generate password for you \n d ---------- Delete credential \n e ---------- To Exit  \n")
+        print('='*45)
+        abbreviation = input().lower()
+        if abbreviation == "c":
+            print('='*45)
+            print("Create new account credential")
+            print("="*45)
+            print("Account name ....")
+            account_name = input().lower()
+            print("Your Account username")
+            username = input()
+            while True:
+                print('='*45)
+                print("Enter the following to continue: \n p ---------- To type your own pasword if you have an account:\n g - To generate Password for you")
+                print('='*45)
+                password = input().lower()
+                if password== 'p':
+                    password = input("Enter Password\n")
+                    break
+                elif password == 'g':
+                    password = generate_password()
+                    break
+                else:
+                    print('='*45)
+                    print("Invalid password please try again")
+                    print('='*45)
+            save_credential(create_credential(account_name,username,password))
+            print('='*45)
+            print(f"Created an Account credential for  {account_name} with a username of {username} and password {password}")
+            print('='*45)
