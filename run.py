@@ -67,3 +67,15 @@ def creadential_checker(credential):
     to check if credentials are true
     '''
     return Credential.creadential_checker(credential)
+def main():
+    print("Hey, welcome to password Locker!")  
+    print('='*45)
+    print("Please choose among the following in order to proceed:\n c ---------- Create an account \n s ---------- Signin for an existing account \n")
+    print('='*45)
+    abbreviation = input().lower()
+    print('='*45)
+    if abbreviation == 'c':
+        print('='*45)
+        print("Create an account in PASSWORD LOCKER")
+        print('='*45)
+       
