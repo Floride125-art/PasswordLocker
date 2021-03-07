@@ -61,3 +61,32 @@ class Credential():
         method to delete account crential
         '''
         Credential.credentials.remove(self)
+    @classmethod
+    def search_credential(cls,account_name):
+        '''
+        method to search for an count credential
+        '''
+        for credential in cls.credentials:
+            if credential.account_name == account_name:
+                return credential
+                
+    @classmethod
+    def view_all_credential(cls):
+        '''
+        method to view all acount credential
+        '''
+        return cls.credentials
+
+    def generate_password(self):
+        account_password = random.randint(00000000,99999999)
+        return account_password
+
+    def creadential_checker(self):
+        '''
+        method to help us now if account exit
+        '''
+        for credential in self.credentials:
+            if credential.account_name == self.account_name:
+                return True
+        return False
+
