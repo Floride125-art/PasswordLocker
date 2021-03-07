@@ -40,3 +40,24 @@ class Credential():
         self.account_name = account_name
         self.user_name = user_name
         self.account_password = account_password
+    @classmethod
+    def user_checker(cls,username,password):
+        '''
+        function to help us to know if a user exit
+        '''
+        for user in User.users:
+            if(user.username == username and user.password == password):
+                user == user.username
+            return user
+
+    def save_credential(self):
+        '''
+        method to save account credential
+        '''
+        Credential.credentials.append(self)
+
+    def delete_credential(self):
+        '''
+        method to delete account crential
+        '''
+        Credential.credentials.remove(self)
