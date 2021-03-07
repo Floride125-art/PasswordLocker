@@ -43,3 +43,27 @@ def delete_credential(credential):
     deleting an account credential
     '''
     credential.delete_credential()
+def search_credential(credential):
+    '''
+    searching a certain account credential
+    '''
+    return Credential.search_credential(credential)
+
+def view_all_credential():
+    '''
+    viewing all accounts credentials
+    '''
+    return Credential.view_all_credential()
+
+def generate_password():
+    '''
+    generating a random password for a use
+    '''
+    password = generate_password()
+    return password
+
+def creadential_checker(credential):
+    '''
+    to check if credentials are true
+    '''
+    return Credential.creadential_checker(credential)
