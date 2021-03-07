@@ -142,3 +142,63 @@ def main():
             print('='*45)
             print(f"Created an Account credential for  {account_name} with a username of {username} and password {password}")
             print('='*45)
+        elif abbreviation == "lc":
+            if view_all_credential():
+                print('='*45)
+                print("Your saved credentials accounts: ")
+                print('='*45)
+                for account in view_all_credential():
+                    print('='*45)
+                    print(f"+ Account:{account.account_name} \n User Name:{username}\n Password:{password}")
+                    print('='*45)
+                print('=' * 45)
+            else:
+                print('='*45)
+                print("You don't have any credentials account yet!!!!!!!!!!!!!!")
+                print('='*45)
+
+        elif abbreviation == "sc":
+            print('='*45)
+            print("Enter account name ")
+            print('='*45)
+            search= input().lower()
+            if search_credential(search):
+                credential_ = search_credential(search)
+                print('='*45)
+                print(f"Account Name : {credential_.account_name}")
+                print('~' * 10)
+                print(f"User Name: {credential_.user_name} Password :{credential_.account_password}")
+                print('~' * 10)
+                print('='*45)
+            else:
+                print('='*45)
+                print("Credential does not exist\n")
+                print('='*45)
+
+        elif abbreviation == "d":
+            print("Enter the account name  you want to delete")
+            print('='*45)
+            search = input().lower()
+            if search_credential(search):
+                credential = search_credential(search)
+                print("~"*10)
+                credential.delete_credential()
+                print('\n')
+                print(f"{credential.account_name} deleted!!!")
+                print('\n')
+            else:
+                print("Credential does not exist ")
+        
+        elif abbreviation == 'g':
+            password = generate_password()
+            print(f" {password} password generated succesfull.")
+        elif abbreviation == 'e':
+            print("Come Back soon please!!")
+            break
+        else:
+            print("Try again")
+    else:
+        print("Please enter a valid input to continue")
+
+if __name__ == '__main__':
+    main()
