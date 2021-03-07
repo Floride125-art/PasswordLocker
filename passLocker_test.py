@@ -8,4 +8,10 @@ class User_Test(unittest.TestCase):
         '''
         function that runs before
         '''
-        self.user = User('Floride','Tuyisenge')
+        self.user = User('Floride','fofo123')
+    def test_init(self):
+        '''
+        to check if user is correctly created
+        '''
+        self.assertEqual(self.user.username,'Floride')
+        self.assertEqual(self.user.password,'fofo123')
