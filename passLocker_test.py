@@ -15,3 +15,27 @@ class User_Test(unittest.TestCase):
         '''
         self.assertEqual(self.user.username,'Floride')
         self.assertEqual(self.user.password,'fofo123')
+    def test_save_user(self):
+        '''
+        to test if user is saved
+        '''
+        self.user.save_user()
+        self.assertEqual(len(User.users),1)
+class Credential_Test(unittest.TestCase):
+    '''
+    class to test a credential class
+    '''
+    def setUp(self):
+        '''
+        function that runs before
+        '''
+        self.credential = Credential('Twitter','Floride','fofo123')
+
+    def test_init(self):
+        """
+        test to check if a new Credentials has been created correctly
+        """
+        self.assertEqual(self.credential.account_name,'Twitter')
+        self.assertEqual(self.credential.user_name,'Floride')
+        self.assertEqual(self.credential.account_password,'fofo123')   
+
